@@ -25,10 +25,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(compress());
 app.use(helmet());
-app.use(cors({
-    origin: config.NODE_ENV === "development" ? "*" : "http://labaleine.netlify.com",
-    optionsSuccessStatus: 200
-}));
+app.use(cors());
 
 app.use(i18n.init);
 
