@@ -1,0 +1,5 @@
+version: "3"
+services:
+  baleine-api-lint:
+    image: $HUB_URL:$TEST_TAG
+    command: /bin/bash -c "yarn install && yarn lint"
