@@ -6,6 +6,12 @@
   "repository": "git@github.com:LaBaleineFr/baleine-api.git",
   "author": "Maxime Cattet <maximecattet@gmx.com>",
   "license": "GPLv3",
+  "scripts": {
+    "build": "gulp build",
+    "lint": "gulp lint",
+    "start": "yarn build && docker-compose run --rm --service-ports baleine-api",
+    "reset": "docker-compose down && docker volume prune"
+  },
   "dependencies": {
     "body-parser": "^1.17.1",
     "bunyan": "^1.8.10",
