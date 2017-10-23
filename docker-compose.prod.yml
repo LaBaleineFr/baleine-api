@@ -10,13 +10,13 @@ services:
       - NODE_ENV=production
       - LOG_LEVEL=info
       - MONGO_URL=mongodb://mongo-dev:27017/baleinebot
-      - API_URL=https://${HOST}
+      - API_URL=https://api.labaleine.gg
       - API_PORT=3636
         
-      - VIRTUAL_HOST=${HOST}
+      - VIRTUAL_HOST=api.labaleine.gg
       - VIRTUAL_PORT=3636
-      - LETSENCRYPT_HOST=${HOST}
-      - LETSENCRYPT_EMAIL=${EMAIL}
+      - LETSENCRYPT_HOST=api.labaleine.gg
+      - LETSENCRYPT_EMAIL=baleinefr@gmail.com
 
 networks:
   web:
